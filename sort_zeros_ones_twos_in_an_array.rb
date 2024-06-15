@@ -1,13 +1,42 @@
-# Question3 1491. Average Salary Excluding the Minimum and Maximum Salary
+# Question # sort the zeros_ones_twos_in_array 
+
 require "byebug"
-def average(salary)
+def sort_colors(nums)
     byebug
-    min_salary = salary.min
-    max_salary = salary.max
-    filtered_salary = salary.reject { |s| s == min_salary || s == max_salary }
-    average_salary = filtered_salary.sum / filtered_salary.size.to_f
-    return average_salary
+    zeros_count = 0
+    ones_count = 0
+    twos_count = 0
+    for i in 0...nums.length
+      if nums[i] == 0
+        zeros_count += 1
+      elsif nums[i] == 1
+        ones_count += 1
+      else
+        twos_count += 1
+      end
+    end
+    overwrite_array(nums, zeros_count, ones_count, twos_count)
 end
 
-salary = [4000,3000,1000,2000]
-puts average(salary)
+def overwrite_array(nums, zeros_count, ones_count, twos_count)
+    byebug
+    index = 0
+    zeros_count.times do
+        nums[index] = 0
+        index += 1
+    end
+
+    ones_count.times do
+        nums[index] = 1
+        index += 1
+    end
+    
+    twos_count.times do
+        nums[index] = 2
+        index += 1
+    end
+end
+
+nums = [2, 0, 2, 1, 1, 0]
+sort_colors(nums)
+puts nums.inspect
