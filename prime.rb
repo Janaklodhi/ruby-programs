@@ -3,7 +3,6 @@
 
 require 'byebug'
 def print_negative_element_of_array(array)
-    byebug
     new_array = []
     for i in 0...array.length
         if (array[i] < 0 )
@@ -15,4 +14,4 @@ end
 array = [-1,-10,100,5,61,-2,-23,8,-90,51]
 print_negative_element_of_array(array) 
 
-we need to print all the  unique element of an array in ruby
+# we need to print all the  unique element of an array in ruby

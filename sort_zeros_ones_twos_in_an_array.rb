@@ -1,8 +1,8 @@
 # Question # sort the zeros_ones_twos_in_array 
+# Sort binary array in linear time
 
 require "byebug"
 def sort_colors(nums)
-    byebug
     zeros_count = 0
     ones_count = 0
     twos_count = 0
@@ -19,7 +19,6 @@ def sort_colors(nums)
 end
 
 def overwrite_array(nums, zeros_count, ones_count, twos_count)
-    byebug
     index = 0
     zeros_count.times do
         nums[index] = 0

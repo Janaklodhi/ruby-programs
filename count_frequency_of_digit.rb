@@ -1,4 +1,3 @@
-require 'byebug'
 def count_frequency_of_digit(num)
     frequency_count = Hash.new(0)
     temp = num.abs
@@ -8,7 +7,7 @@ def count_frequency_of_digit(num)
         temp /= 10
     end
     
-    puts "Digit frequency in #{num}:"
+    puts "Digit frsequency in #{num}:"
     frequency_count.each do |digit, count|
         puts "Digit #{digit}: #{count} times"
     end
